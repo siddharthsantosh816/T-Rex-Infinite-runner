@@ -6,7 +6,7 @@ class Objects{
         if(frameCount % 70 === 0) {
             var obsX = random(displayWidth/3+100,displayWidth);
             
-            var obstacle = createSprite(obsX,height-50,10,40);
+            var obstacle = createSprite(obsX,height-40,10,40);
             //obstacle.debug = true;
             obstacle.velocityX = -6;
             
