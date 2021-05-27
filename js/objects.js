@@ -6,11 +6,11 @@ class Objects{
         if(frameCount % 70 === 0) {
             var obsX = random(displayWidth/3+100,displayWidth);
             
-            var obstacle = createSprite(obsX,height-40,10,40);
+            var obstacle = createSprite(obsX,displayHeight-175,10,40);
             //obstacle.debug = true;
             obstacle.velocityX = -6;
             
-            obstacle.scale = height/600;
+            obstacle.scale = displayHeight/600;
             //generate random obstacles
             var rand = Math.round(random(1,2));
         // console.log(rand);
@@ -41,10 +41,10 @@ class Objects{
     createClouds (){
         if (frameCount % 80 === 0) {
                 var cldX = random(displayWidth/3,displayWidth*2);
-                var cloud = createSprite(cldX,height/3,40,10);
-                cloud.y = Math.round(random(height/2,height/10));
+                var cloud = createSprite(cldX,displayHeight/3,40,10);
+                cloud.y = Math.round(random(displayHeight/2,displayHeight/10));
                 cloud.addImage(cloudImage);
-                cloud.scale = random(height/1000,4*height/1000);
+                cloud.scale = random(1,2);
                 cloud.velocityX = -3;
                 
                  //assign lifetime to the variable

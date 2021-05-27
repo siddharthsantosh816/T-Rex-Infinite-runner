@@ -3,22 +3,21 @@ class Game{
     constructor(){}
 
     start(){
-        sun = createSprite(width/2+300,100,10,10);
+        sun = createSprite(displayWidth/2+300,100,10,10);
         sun.addImage(sunImg);
         console.log(sun.x);
         sun.scale = 0.09;
         
-        
-        trex = createSprite(50,height-20,15,50);
+        trex = createSprite(50,displayHeight-190,15,50);
         trex.addAnimation("running", trex_running);
         trex.addAnimation("collided", trex_collided);
-        trex.scale = height/450;
+        trex.scale = 1.4;
         trex.setCollider("rectangle",0,-5,65,60);
         
-        gameOver = createSprite(width/2-200,300);
+        gameOver = createSprite(displayWidth/2-200,300);
         gameOver.addImage(gameOverImg);
         
-        restart = createSprite(width/2-200,height/3);
+        restart = createSprite(displayWidth/2-200,displayHeight/3);
         restart.addImage(restartImg);
           
         gameOver.scale = 0.8;
@@ -27,7 +26,7 @@ class Game{
         gameOver.visible = false;
         restart.visible = false;
         
-        invisibleGround = createSprite(width/2,height-10,width*500,50);
+        invisibleGround = createSprite(displayWidth/2,displayHeight-140,displayWidth*500,50);
        // invisibleGround.addImage(groundImage);
         invisibleGround.visible = false;
 
@@ -40,7 +39,10 @@ class Game{
         // score = score + Math.round(getFrameRate()/60);
         //ground.velocityX = -6;
         
-        if((touches.length > 0 || keyIsDown("space")) && (trex.y >= 300)) {
+        if((touches.length > 0 || keyDown("space")) && trex.y >= 545
+        
+        
+        ) {
             trex.velocityY = -13;
             jumpSound.play();
             touches = [];  
