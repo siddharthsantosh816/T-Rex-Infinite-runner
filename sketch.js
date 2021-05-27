@@ -50,7 +50,7 @@ function setup() {
 
 function draw() {
   background(170,206,251);
-  image(groundImage,-displayWidth/2,displayHeight-150,displayWidth*500,40);
+  image(groundImage,-displayWidth/2,displayHeight-160,displayWidth*500,40);
   drawSprites();
   if(gameState === PLAY) {
       games.plays();
