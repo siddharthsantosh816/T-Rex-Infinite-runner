@@ -40,7 +40,7 @@ class Game{
         // score = score + Math.round(getFrameRate()/60);
         //ground.velocityX = -6;
         
-        if((touches.length > 0 || keyDown("space")) && trex.y >= (height-height/5)) {
+        if((touches.length > 0 || keyIsDown("space")) && trex.y >= 300) {
             trex.velocityY = -13;
             jumpSound.play();
             touches = [];  
