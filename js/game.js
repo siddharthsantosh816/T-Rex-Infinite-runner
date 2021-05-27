@@ -9,7 +9,7 @@ class Game{
         sun.scale = 0.09;
         
         
-        trex = createSprite(50,height-30,15,50);
+        trex = createSprite(50,height-20,15,50);
         trex.addAnimation("running", trex_running);
         trex.addAnimation("collided", trex_collided);
         trex.scale = height/450;
