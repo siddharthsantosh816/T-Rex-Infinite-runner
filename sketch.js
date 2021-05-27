@@ -40,7 +40,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(displayWidth, displayHeight-130);
   games=new Game();
   games.start();
   
