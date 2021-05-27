@@ -1,1 +1,1 @@
-# T-Rex infinite-runner
+# T-Rex Infinite-runner
