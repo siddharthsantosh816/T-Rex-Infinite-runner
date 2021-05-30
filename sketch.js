@@ -51,7 +51,7 @@ function setup() {
 function draw() {
   background(170,206,251);
   textSize(20);
-  text("Score: "+score, sun.x-200,50);
+  text("Score: "+score, sun.x-580,50);
   //console.log(score);
   image(groundImage,-displayWidth/2,displayHeight-160,displayWidth*500,40);
  
