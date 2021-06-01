@@ -40,7 +40,7 @@ function preload(){
 }
 
 function setup() {
-  createCanvas(displayWidth, displayHeight-130);
+  createCanvas(displayWidth, 0.83*displayHeight);
   games=new Game();
   games.start();
   score = 0;
@@ -54,7 +54,7 @@ function draw() {
   fill("blue");
   text("Score: "+score, sun.x-580,50);
   //console.log(score);
-  image(groundImage,-displayWidth/2,displayHeight-160,displayWidth*500,40);
+  image(groundImage,-displayWidth/2,0.76*displayHeight,displayWidth*500,40);
  
   drawSprites();
   if(gameState === PLAY) {
