@@ -9,7 +9,7 @@ class Game{
       //  console.log(sun.x);
         sun.scale = 0.09;
         
-        trex = createSprite(10,displayHeight-190,15,50);
+        trex = createSprite(10,0.68*displayHeight,15,50);
         trex.addAnimation("running", trex_running);
         trex.addAnimation("collided", trex_collided);
         trex.scale = 1.4;
@@ -29,7 +29,7 @@ class Game{
         gameOver.visible = false;
         restart.visible = false;
         
-        invisibleGround = createSprite(displayWidth/2,displayHeight-140,displayWidth*500,50);
+        invisibleGround = createSprite(displayWidth/2,0.79*displayHeight,displayWidth*500,50);
         invisibleGround.visible = false;
 
         objects = new Objects();
@@ -48,7 +48,7 @@ class Game{
         gameOver.x=trex.x+430;
         restart.x=trex.x+430;
         
-        if((touches.length > 0 || keyDown("space")) && trex.y >= 545) {
+        if((touches.length > 0 || keyDown("space")) && trex.y >= 0.67*displayHeight) {
             trex.velocityY = -13;
             jumpSound.play();
             touches = [];  
