@@ -7,7 +7,7 @@ class Objects{
                 var p = random(-100,600);
                 obsX = obsX+0.75*displayWidth+p;
                 // obsX = obsX + displayWidth*500/600+p;
-                var obstacle = createSprite(obsX,displayHeight-175,10,40);
+                var obstacle = createSprite(obsX,0.73*displayHeight,10,40);
 
                 //obstacle.velocityX = -6;
                 
